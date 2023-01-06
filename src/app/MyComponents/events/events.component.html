@@ -1,0 +1,47 @@
+<!-- {{ event.data.events.name |json}} -->
+
+
+<div class="card_container">
+<a class="ap" *ngFor="let item of event.data.events |paginate:{itemsPerPage:4, currentPage:p}">
+<div class="card">
+  <div class="image">
+     <img src="{{item.cover_picture}}">
+  </div>
+  <div class="title">
+   <h5>{{item.name}}</h5>
+  </div>
+  <div class="details">
+    <div class="event_info">
+      <p class="event_info_lable">Start on</p>
+      <p class="event_info_value"></p>
+    </div>
+    <div class="event_info">
+      <p class="event_info_lable">Entry Fess</p>
+      <p class="event_info_value">{{item.fees}}</p>
+    </div>
+    <div class="event_info">
+      <p class="event_info_lable">Vanue</p>
+      <p class="event_info_value">online</p>
+    </div>
+    <div class="event_price"></div>
+    <div class="event_venue"></div>
+  </div>
+  <div class="des">
+   <p>{{item.short_desc}}</p>
+  </div>
+
+  <div class="tags">
+    <div class="teg "  *ngFor=" let t of item.card_tags | slice:0:2">
+      <a >{{t}}</a>
+     </div>
+  </div>
+      <div class="btn">
+        <button>Register Now</button>
+      </div>
+</div>
+</a>
+</div>
+<div class="pagenation">
+  <pagination-controls (pageChange)="p=$event"></pagination-controls>
+</div>
+

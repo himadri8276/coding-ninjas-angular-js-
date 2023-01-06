@@ -1,0 +1,86 @@
+<div class="body">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="color: white" href="#">
+        <img alt="Coding Ninjas"  width="75px" height="28px" src="https://files.codingninjas.in/cn-logo-dark-9824.svg">
+      </a>
+    </div>
+  </nav>
+  <div class="container-fulid main-container">
+    <div class="container-fluid text-center">
+      <div class="main-header">
+        <div class="heading-text">EVENTS & NEWS</div>
+        <div class="heading-subtext">Learn, Compete & Grow</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container events-wrapper">
+    <div class="tabs events-categories">
+      <a class="tab selected" aria-current="page" href="#">
+        <img
+          _ngcontent-serverapp-c194=""
+          alt=""
+          src="https://www.codingninjas.com/assets-landing/images/all-events-selected.svg"
+        />
+        All Events</a
+      >
+      <a class="nav-link tab" href="#">
+        <img
+          _ngcontent-serverapp-c194=""
+          alt=""
+          src="https://www.codingninjas.com/assets-landing/images/webinar-unselected.svg"
+        />
+        Webinars
+      </a>
+      <a class="nav-link tab" href="#">
+        <img
+          _ngcontent-serverapp-c194=""
+          alt=""
+          src="https://www.codingninjas.com/assets-landing/images/coding-events-unselected.svg"
+        />Coding Events</a
+      >
+      <a class="nav-link tab">
+        <img
+          _ngcontent-serverapp-c194=""
+          alt="bootcamp-icon"
+          src="https://files.codingninjas.in/bootcamp_events_unselected-5397.png"
+        />Bootcamp Event</a
+      >
+      <a class="nav-link tab">
+        <img
+          _ngcontent-serverapp-c194=""
+          alt="workshop-icon"
+          src="https://files.codingninjas.in/workshop_unselected-5395.png"
+        />Workshop</a
+      >
+    </div>
+    <div class="tabs event-sub-categories">
+      <a class="nav-link selected tab" aria-current="page" href="#">Upcoming</a>
+      <a class="nav-link tab sub_tab" href="#">Archived</a>
+      <a class="nav-link tab sub_tab" href="#">All Time Favorites</a>
+    </div>
+
+
+    <div class="text-center">
+      <div class="event-body">
+        <div class="event_card grid-x grid-margin-x small-up-2 medium-up-3 large-up-4 ">
+           <div class="event_card_container cell">
+            <app-events></app-events>
+           </div>
+        </div>
+        <div class="alltegs-container">
+          <div class="heading">Tags</div>
+          <div class="tegs-content" >
+             <div *ngFor="let item of tegs1.data.tags" >
+              <div class="teg">
+                <a >{{item}}</a>
+               </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
